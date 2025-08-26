@@ -1,0 +1,316 @@
+/* Importando uma fonte moderna do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+/* Variáveis de Cor - Edite aqui para mudar as cores do site todo! */
+:root {
+    --cor-primaria: #1eff00; /* Laranja, como o do SoundCloud */
+    --cor-fundo-escuro: #121212fb;
+    --cor-fundo-claro: #1e1e1e;
+    --cor-texto-principal: #ffffff;
+    --cor-texto-secundario: #b3b3b3;
+}
+
+/* Estilos Globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--cor-fundo-escuro);
+    color: var(--cor-texto-principal);
+    line-height: 1.6;
+}
+
+/* Cabeçalho e Navegação */
+header {
+    background-color: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    color: var(--cor-primaria);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--cor-texto-principal);
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--cor-primaria);
+}
+
+.menu-hamburger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* Seção Hero (Inicial) */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('img/foto-evento1.jpg') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--cor-texto-secundario);
+}
+
+.btn {
+    background-color: var(--cor-primaria);
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e64a00;
+}
+
+/* Seções de Conteúdo */
+.content-section {
+    padding: 5rem 10%;
+    text-align: center;
+}
+
+.content-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+.section-subtitle {
+    color: var(--cor-texto-secundario);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dark {
+    background-color: var(--cor-fundo-claro);
+}
+
+/* Seção Sobre */
+.sobre-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    text-align: left;
+    margin-top: 3rem;
+}
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--cor-primaria);
+}
+
+/* Seção Música */
+.music-player {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Seção Agenda */
+.agenda-list {
+    list-style: none;
+    max-width: 800px;
+    margin: 3rem auto 0;
+    text-align: left;
+}
+
+.agenda-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid #333;
+    transition: background-color 0.3s;
+}
+.agenda-item:hover {
+    background-color: var(--cor-fundo-claro);
+}
+.agenda-item.past {
+    opacity: 0.5;
+}
+.agenda-item .data {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--cor-primaria);
+    min-width: 80px;
+}
+.agenda-item .evento {
+    flex-grow: 1;
+    margin: 0 1rem;
+}
+.btn-ticket {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+.info-past {
+    color: var(--cor-texto-secundario);
+}
+
+/* Seção Galeria */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 3rem;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Seção Contato */
+.email-link {
+    display: inline-block;
+    margin: 1rem 0 2rem;
+    font-size: 1.2rem;
+    color: var(--cor-primaria);
+    text-decoration: none;
+}
+.social-icons a {
+    color: var(--cor-texto-principal);
+    font-size: 2rem;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+.social-icons a:hover {
+    color: var(--cor-primaria);
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--cor-fundo-claro);
+    color: var(--cor-texto-secundario);
+    font-size: 0.9rem;
+}
+
+/* Responsividade para Celulares */
+/* ========================================= */
+/* == RESPONSIVIDADE PARA CELULARES == */
+/* ========================================= */
+
+/* Estas regras só serão aplicadas em telas com largura máxima de 768px (tablets e celulares) */
+@media (max-width: 768px) {
+
+    /* --- AJUSTES GERAIS --- */
+    .content-section {
+        /* Diminui o espaçamento lateral nas seções para dar mais espaço ao conteúdo */
+        padding: 4rem 5%;
+    }
+
+    /* --- NAVEGAÇÃO / MENU --- */
+    .nav-links {
+        /* Esconde o menu de links normalmente */
+        position: absolute;
+        top: 100%; /* Posiciona o menu logo abaixo do cabeçalho */
+        left: 0;
+        width: 100%;
+        background-color: #121212; /* Fundo escuro para o menu aberto */
+        flex-direction: column; /* Empilha os links verticalmente */
+        align-items: center;
+        max-height: 0; /* Começa com altura 0, ou seja, escondido */
+        overflow: hidden; /* Esconde o conteúdo que transbordar */
+        transition: max-height 0.5s ease-out; /* Animação suave de abrir/fechar */
+    }
+
+    .nav-links.active {
+        /* Quando o menu tem a classe 'active' (adicionada pelo JavaScript), a altura aumenta */
+        max-height: 500px; /* Uma altura suficiente para caber todos os links */
+    }
+
+    .nav-links li {
+        /* Aumenta o espaçamento entre os links no menu aberto */
+        margin: 1.5rem 0;
+    }
+
+    .menu-hamburger {
+        /* Faz o ícone do menu 'hambúrguer' (as três barrinhas) finalmente aparecer */
+        display: block;
+    }
+
+    /* --- SEÇÃO HERO (INICIAL) --- */
+    .hero-content h1 {
+        /* Diminui o tamanho da fonte do título principal para caber melhor na tela */
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    /* --- SEÇÃO SOBRE --- */
+    .sobre-container {
+        /* Muda a direção para 'coluna', empilhando a foto e o texto um em cima do outro */
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* --- SEÇÃO AGENDA --- */
+    .agenda-item {
+        /* Também muda para coluna, para que a data, evento e botão fiquem empilhados */
+        flex-direction: column;
+        align-items: flex-start; /* Alinha os itens à esquerda */
+        gap: 0.5rem; /* Adiciona um pequeno espaço entre eles */
+    }
+}
